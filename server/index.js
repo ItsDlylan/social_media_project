@@ -8,6 +8,11 @@ app.use(cors());
 let baseURL = '/api';
 
 // You will need endpoints  delete a comment, delete a post, delete a user, update a user, post or comment.
+//get users
+app.get(`${baseURL}/user/`, userCtrl.getUser)
+
+//get posts
+app.get(`${baseURL}/user/post`, userCtrl.getPost)
 
 // add user
 app.post(`${baseURL}/user/`, userCtrl.addUser);
@@ -19,19 +24,19 @@ app.post(`${baseURL}/user/post`, userCtrl.addPost);
 app.post(`${baseURL}/user/post/comment`, userCtrl.addComment);
 
 // delete comment
-app.delete(`{baseURL}/user/post/comment/:commentid`, userCtrl.deleteComment);
+app.delete(`${baseURL}/user/post/comment/:commentid`, userCtrl.deleteComment);
 
 // Delete user entirely.
-app.delete(`{baseURL}/user/:userid`, userCtrl.deleteUser);
+app.delete(`${baseURL}/user/:userid`, userCtrl.deleteUser);
 
 // Update user data
-app.put(`{baseURL}/user`, userCtrl.updateUser);
+app.put(`${baseURL}/user/:id`, userCtrl.updateUser);
 
 // update post
-app.put(`{baseURL}/user/post/:postid`, userCtrl.updatePost);
+app.put(`${baseURL}/user/post/:postid`, userCtrl.updatePost);
 
 // update comment
-app.put(`{baseURL}/user/post/comment/:commentid`, userCtrl.updateComment);
+app.put(`${baseURL}/user/post/comment/:commentid`, userCtrl.updateComment);
 
 app.listen(4000, () => {
 	console.log(`Server is now lying inside of 4000`);
