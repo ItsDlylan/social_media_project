@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Kurma</title>
+		<meta
+			name="description"
+			content="The non belivers social media platform."
+		/>
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+			integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<style type="text/css">
+			body {
+				background-color: #dadada;
+			}
+			body > .grid {
+				height: 100%;
+			}
+			.image {
+				margin-top: -100px;
+			}
+			.column {
+				max-width: 450px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Create Account -->
+		<div class="ui page dimmer" id="signupmodal_dim">
+			<div class="ui modal" id="modal_signup">
+				<div class="header">New User?</div>
+				<div class="content">
+					<form class="ui form">
+						<div class="field">
+							<label>First Name</label>
+							<input
+								type="text"
+								name="first-name"
+								placeholder="First Name"
+							/>
+						</div>
+						<div class="field">
+							<label>Last Name</label>
+							<input
+								type="text"
+								name="last-name"
+								placeholder="Last Name"
+							/>
+						</div>
+						<button class="ui button" type="submit">Submit</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<div class="ui middle aligned center aligned grid">
+			<div class="column">
+				<h2 class="ui teal image header">
+					<div class="content">Log-in to your account</div>
+				</h2>
+				<form class="ui large form">
+					<div class="ui stacked segment">
+						<div class="field">
+							<div class="ui left icon input">
+								<i class="user icon"></i>
+								<input
+									type="text"
+									name="text"
+									placeholder="Username"
+								/>
+							</div>
+						</div>
+						<div class="field">
+							<div class="ui left icon input">
+								<i class="lock icon"></i>
+								<input
+									type="password"
+									name="password"
+									placeholder="Password"
+								/>
+							</div>
+						</div>
+						<div class="ui fluid large teal submit button">
+							Login
+						</div>
+					</div>
+
+					<div class="ui error message"></div>
+				</form>
+
+				<div class="ui message">
+					New to us? <a href="#" id="signUp">Sign Up</a>
+				</div>
+			</div>
+		</div>
+		<script src="index.js" async defer></script>
+	</body>
+</html>
