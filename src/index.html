@@ -42,35 +42,43 @@
 			<div class="ui modal" id="modal_signup">
 				<div class="header">New User?</div>
 				<div class="content">
-					<form class="ui form">
-						<div class="field">
-							<label>First Name</label>
-							<input
-								type="text"
-								name="first-name"
-								placeholder="First Name"
-							/>
+					<form class="ui form" id="user_create-form">
+						<div class="field required">
+							<div class="ui left icon input">
+								<i class="user icon"></i>
+								<input
+									type="text"
+									name="text"
+									placeholder="Username"
+									required
+								/>
+							</div>
 						</div>
-						<div class="field">
-							<label>Last Name</label>
-							<input
-								type="text"
-								name="last-name"
-								placeholder="Last Name"
-							/>
+						<div class="field required">
+							<div class="ui left icon input">
+								<i class="lock icon"></i>
+								<input
+									type="password"
+									name="password"
+									placeholder="Password"
+									required
+								/>
+							</div>
 						</div>
 						<button class="ui button" type="submit">Submit</button>
+						<div class="ui display error message active"></div>
 					</form>
 				</div>
 			</div>
 		</div>
 
+		<!-- Sign in -->
 		<div class="ui middle aligned center aligned grid">
 			<div class="column">
 				<h2 class="ui teal image header">
 					<div class="content">Log-in to your account</div>
 				</h2>
-				<form class="ui large form">
+				<form class="ui large form" id="sign_in_form">
 					<div class="ui stacked segment">
 						<div class="field">
 							<div class="ui left icon input">
@@ -79,6 +87,8 @@
 									type="text"
 									name="text"
 									placeholder="Username"
+									required
+									id="signin_username"
 								/>
 							</div>
 						</div>
@@ -89,22 +99,28 @@
 									type="password"
 									name="password"
 									placeholder="Password"
+									required
+									id="signin_password"
 								/>
 							</div>
 						</div>
-						<div class="ui fluid large teal submit button">
+						<button
+							class="ui fluid large teal submit button"
+							type="submit"
+						>
 							Login
-						</div>
+						</button>
 					</div>
 
-					<div class="ui error message"></div>
+					<div class="ui error message active"></div>
 				</form>
 
 				<div class="ui message">
-					New to us? <a href="#" id="signUp">Sign Up</a>
+					New to us? <a href="javascript:;" id="signUp">Sign Up</a>
 				</div>
 			</div>
 		</div>
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="index.js" async defer></script>
 	</body>
 </html>
