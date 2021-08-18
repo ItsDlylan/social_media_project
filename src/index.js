@@ -77,6 +77,7 @@ document
 			password: document.querySelector(DOMSTRINGS.signin_passwordfield)
 				.value,
 		};
+		
 		axios
 			.post(`${baseURL}users`, loginInfo)
 			.then((res) => {
