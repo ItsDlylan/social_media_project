@@ -89,11 +89,11 @@ document
 					posts,
 					comments
 				}
-				
+				console.log(user)
 			})
 			.catch(errCallback);
 
-			
+
 		// axios .get user data update HTML to host home of the site.
 		// display load sign while it gets all of the html updated.
 
