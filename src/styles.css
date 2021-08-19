@@ -1,0 +1,34 @@
+body {
+	background-color: #dadada;
+}
+body > .grid {
+	height: 100%;
+}
+.column {
+	max-width: 450px;
+}
+/* Fixing Semantic stuff. */
+
+.off {
+	/* important to override semantic UI */
+	display: none !important;
+}
+.on {
+	display: inherit;
+}
+.container{
+	display: grid;
+	grid-template-columns: .7fr 1.6fr .7fr;
+}
+.left {
+	border: 2px solid green;
+	width: 100%;
+}
+.middle {
+	border: 2px solid red;
+	width: 100%;
+}
+.right {
+	border: 2px solid blue;
+	width: 100%;
+}

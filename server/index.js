@@ -8,9 +8,10 @@ app.use(cors());
 let baseURL = '/users';
 
 // You will need endpoints  delete a comment, delete a post, delete a user, update a user, post or comment.
-//get users
-// app.get(`${baseURL}`, userCtrl.getUser);
+
+//post users to check
 app.post(`${baseURL}`, userCtrl.getUser);
+
 //get posts
 app.get(`${baseURL}/post`, userCtrl.getPost);
 

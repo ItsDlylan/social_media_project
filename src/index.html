@@ -20,25 +20,11 @@
 			crossorigin="anonymous"
 			referrerpolicy="no-referrer"
 		/>
-
-		<style type="text/css">
-			body {
-				background-color: #dadada;
-			}
-			body > .grid {
-				height: 100%;
-			}
-			.image {
-				margin-top: -100px;
-			}
-			.column {
-				max-width: 450px;
-			}
-		</style>
+		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
 		<!-- Create Account -->
-		<div class="ui page dimmer" id="signupmodal_dim">
+		<div class="ui page dimmer off" id="signupmodal_dim">
 			<div class="ui modal" id="modal_signup">
 				<div class="header">New User?</div>
 				<div class="content">
@@ -73,7 +59,7 @@
 		</div>
 
 		<!-- Sign in -->
-		<div class="ui middle aligned center aligned grid">
+		<div class="ui middle aligned center aligned grid off">
 			<div class="column">
 				<h2 class="ui teal image header">
 					<div class="content">Log-in to your account</div>
@@ -120,6 +106,14 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- Main Page -->
+		<div class="container grid">
+			<div class="left"></div>
+			<div class="middle"></div>
+			<div class="right"></div>
+		</div>
+
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="index.js" async defer></script>
 	</body>
