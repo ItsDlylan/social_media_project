@@ -90,7 +90,12 @@ document
 					posts,
 					comments
 				}
-				console.log(user)
+				
+				// User the user data to set up the social media site.
+				
+				
+
+
 			})
 			.catch(errCallback);
 
