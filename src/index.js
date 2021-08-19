@@ -77,6 +77,7 @@ document
 			password: document.querySelector(DOMSTRINGS.signin_passwordfield)
 				.value,
 		};
+		
 		axios
 			.post(`${baseURL}users`, loginInfo)
 			.then((res) => {
@@ -89,7 +90,12 @@ document
 					posts,
 					comments
 				}
-				console.log(user)
+				
+				// User the user data to set up the social media site.
+				
+				
+
+
 			})
 			.catch(errCallback);
 

@@ -1,0 +1,18 @@
+body {
+	background-color: #dadada;
+}
+body > .grid {
+	height: 100%;
+}
+.column {
+	max-width: 450px;
+}
+/* Fixing Semantic stuff. */
+
+.off {
+	/* important to override semantic UI */
+	display: none !important;
+}
+.on {
+	display: inherit;
+}

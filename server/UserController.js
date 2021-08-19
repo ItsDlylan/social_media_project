@@ -3,36 +3,39 @@ const userData = require('./userData.json');
 let globalUserId = 3;
 let globalPostId = 3;
 
-
-
 module.exports = {
 	getUser: (req, res) => {
 		// Grabs the data from the form
 		let { username, password } = req.body;
 
-		// Finds the index of the object inside of userData.json 
-		let index = userData.findIndex(x => x.username.toLowerCase() === username.toLowerCase())
-		
+		// Finds the index of the object inside of userData.json
+		let index = userData.findIndex(
+			(x) => x.username.toLowerCase() === username.toLowerCase(),
+		);
+
 		// if the index is not -1 meaning it found the index inside of the array. then start matching the password.
-		if(index !== -1){
-			if(userData[index].password.toLowerCase() === password.toLowerCase()){
-				console.log('password was correct and so was the username')
+		if (index !== -1) {
+			if (
+				userData[index].password.toLowerCase() ===
+				password.toLowerCase()
+			) {
+				console.log('password was correct and so was the username');
 				// send all but the password to the front end.
 				const userSentData = {
 					id: userData[index].id,
 					username: userData[index].username,
 					avatar: userData[index].avatar,
 					posts: userData[index].posts,
-					comments: userData[index].comments
-				}
-				res.status(200).send(userSentData)
-			} else{
-				console.log('username was correct but the password wasnt')
-				res.status(400).send('Password is not correct')
+					comments: userData[index].comments,
+				};
+				res.status(200).send(userSentData);
+			} else {
+				console.log('username was correct but the password wasnt');
+				res.status(400).send('Password is not correct');
 			}
-		} else{
-			res.status(400).send('username is not in the data')
-			console.log('username is not in the data.')
+		} else {
+			res.status(400).send('username is not in the data');
+			console.log('username is not in the data.');
 		}
 	},
 	getPost: (req, res) => {
@@ -74,6 +77,7 @@ module.exports = {
 		res.status(200).send('comment created');
 	},
 	deleteComment: (req, res) => {},
+	deletePost: (req, res) => {},
 	deleteUser: (req, res) => {},
 	updateUser: (req, res) => {
 		let { id } = req.params;
