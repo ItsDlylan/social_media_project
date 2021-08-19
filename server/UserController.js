@@ -73,7 +73,10 @@ module.exports = {
 
 		res.status(200).send('comment created');
 	},
-	deleteComment: (req, res) => {},
+	deleteComment: (req, res) => {
+		console.log(req)
+		res.status(200).send('comment deleted')
+	},
 	deleteUser: (req, res) => {},
 	updateUser: (req, res) => {
 		let { id } = req.params;
