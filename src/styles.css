@@ -1,3 +1,5 @@
+@import "~normalize.css/normalize.css";
+
 body {
 	background-color: #dadada;
 }
@@ -17,6 +19,7 @@ body > .grid {
 	display: inherit;
 }
 .container{
+	margin: 0;
 	display: grid;
 	grid-template-columns: .7fr 1.6fr .7fr;
 }
