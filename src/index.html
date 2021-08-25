@@ -106,14 +106,18 @@
 				</div>
 			</div>
 		</div>
-
+<div class="post"></div>
 		<!-- Main Page -->
 		<div class="container grid">
 			<div class="left"></div>
 			<div class="middle"></div>
 			<div class="right"></div>
 		</div>
-
+		
+		<script type="text/babel" src="Components/Post.js"></script>
+		<script type="text/babel">
+			ReactDOM.render(<Post/>, document.querySelector('.post'))
+		</script>
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="index.js" async defer></script>
 	</body>

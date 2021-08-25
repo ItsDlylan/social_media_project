@@ -39,6 +39,6 @@ app.put(`${baseURL}/post/:postid`, userCtrl.updatePost);
 // update comment
 app.put(`${baseURL}/post/comment/:commentid`, userCtrl.updateComment);
 
-app.listen(4000, () => {
-	console.log(`Server is now lying inside of 4000`);
+app.listen(3000, () => {
+	console.log(`Server is now lying inside of 3000`);
 });
