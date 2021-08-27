@@ -9,5 +9,3 @@ function Post(){
     <p>comment</p>
   </>)
 }
-
-export Post
