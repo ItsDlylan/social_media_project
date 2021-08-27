@@ -1,38 +1,37 @@
-.App {
-  text-align: center;
-}
+@import "~normalize.css/normalize.css";
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	background-color: #dadada;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body > .grid {
+	height: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.column {
+	max-width: 450px;
 }
+/* Fixing Semantic stuff. */
 
-.App-link {
-  color: #61dafb;
+.off {
+	/* important to override semantic UI */
+	display: none !important;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.on {
+	display: inherit;
+}
+.container{
+	margin: 0;
+	display: grid;
+	grid-template-columns: .7fr 1.6fr .7fr;
+}
+.left {
+	border: 2px solid green;
+	width: 100%;
+}
+.middle {
+	border: 2px solid red;
+	width: 100%;
+}
+.right {
+	border: 2px solid blue;
+	width: 100%;
 }

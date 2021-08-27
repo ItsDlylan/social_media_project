@@ -1,0 +1,47 @@
+[
+    {
+        "id": 0,
+        "username": "admin",
+        "password": "admin",
+        "avatar": "",
+        "posts": {
+            "post_Text": "I am an admin",
+            "postID": 0
+        },
+        "comments": {
+            "comment_text": "this comment is just for show",
+            "post_Id": 0,
+            "comment_Id": 1
+        }
+    },
+    {
+        "id": 1,
+        "username": "ScottDoesntBelieve404",
+        "password": "hax0r4404",
+        "avatar": "",
+        "posts": {
+            "post_Text": "I am a doubter",
+            "postID": 1
+        },
+        "comments": {
+            "comment_text": "haha doubt you can do it in 24 hours :)",
+            "post_Id": 1,
+            "comment_Id": 1
+        }
+    },
+    {
+        "id": 2,
+        "username": "JeddyLovesLOL",
+        "password": "tooManyBrokenKeyboardsToMendTheSoul",
+        "avatar": "",
+        "posts": {
+            "postText": "is this dead?",
+            "postID": 2
+        },
+        "comments": {
+            "comment_text": "I believe he can do it :)",
+            "post_Id": 1,
+            "comment_Id": 2
+        }
+    }
+]
